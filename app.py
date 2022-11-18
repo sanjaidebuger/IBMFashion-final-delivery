@@ -66,7 +66,7 @@ def NewUser():
 @app.route("/UserLogin")
 def UserLogin():
 
-    return render_template('UserLogin.html')
+    return render_template('client/Login.html')
 
 @app.route("/AdminHome")
 def AdminHome():
@@ -256,7 +256,7 @@ def userlogin():
             # run a sql query
             print(engine.execute("SELECT * FROM Employee_Data").fetchall())
 
-            return render_template('UserHome.html', data=engine.execute("SELECT * FROM Employee_Data").fetchall())
+            return render_template('client/login.html', data=engine.execute("SELECT * FROM Employee_Data").fetchall())
 
 
 
