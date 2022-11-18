@@ -63,10 +63,10 @@ def AdminLogin():
 def NewUser():
 
     return render_template('NewUser.html')
+    
 @app.route("/UserLogin")
 def UserLogin():
-
-    return render_template('client/Login.html')
+ return render_template('client/Login.html')
 
 @app.route("/AdminHome")
 def AdminHome():
@@ -144,9 +144,6 @@ def Search():
 def viewproduct():
 
     searc = request.form['subcat']
-
-
-
 
     conn = ibm_db.connect(dsn, "", "")
     pd_conn = ibm_db_dbi.Connection(conn)
