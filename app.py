@@ -51,7 +51,7 @@ app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
 @app.route("/")
 def homepage():
 
-    return render_template('index.html')
+    return render_template('client/index.html')
 
 
 @app.route("/AdminLogin")
