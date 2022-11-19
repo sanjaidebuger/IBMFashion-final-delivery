@@ -90,7 +90,7 @@ def ProductInfo():
     # run a sql query
     print(engine.execute("SELECT * FROM Employee_Data").fetchall())
 
-    return render_template('ProductInfo.html', data=engine.execute("SELECT * FROM Employee_Data").fetchall())
+    return render_template('client/ProductInfo.html', data=engine.execute("SELECT * FROM Employee_Data").fetchall())
 
 
 

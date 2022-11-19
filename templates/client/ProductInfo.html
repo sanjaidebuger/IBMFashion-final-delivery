@@ -63,15 +63,15 @@
             <div class="row">
                 <div class="col-xl-3 col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="{{ url_for('static', filename= 'img/logo.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ url_for('static', filename= 'img/logo.png') }}" alt=""></a>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-7">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="">User profile</a></li>
+                            <li ><a href="/AdminHome">User profile</a></li>
                             <li><a href="#">New Products</a></li>
-                            <li><a href="/ProductInfo">ProductInfo</a></li>
+                            <li class="active"><a href="#">ProductInfo</a></li>
                             <!-- <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="./product-details.html">Product Details</a></li>
@@ -152,68 +152,53 @@
     <!-- offer banner end -->
 <!-- data table -->
 <div class="container" style="margin-bottom: 100px">
-  <h1 style="text-align:center;padding: 10px;margin-top: 100px;font-size: 25px;">User Profile</h1>
+  <h1 style="text-align:center;padding: 10px;margin-top: 100px;font-size: 25px;">PRoduct Info</h1>
     <table class="rwd-table">
       <tbody>
         <tr>
-          <th>S.No</th>
-          <th>UserName</th>
-          <th>Email</th>
-          <th>Number</th>
-          <th>Logged Time</th>
+          <th>Product ID</th>
+          <th>Product title</th>
+          <th>Product category</th>
+          <th>Product price</th>
+          <th>Product Image</th>
+          
           
         </tr>
         <tr>
           <td data-th="Supplier Code">
-            1
+            134532
           </td>
           <td data-th="Supplier Name">
-            Vimala
+            Women's Polyester A-Line Long Dress
           </td>
           <td data-th="Invoice Number">
-            vimala@gmail.com
+            Party wear
           </td>
           <td data-th="Invoice Date">
-            1234567890
+            Rs 399.00
           </td>
           <td data-th="Due Date">
-           03:09 Pm
+           <img style="width: 100px;" src="../../static/img/shop/shop-3.jpg" alt="">
           </td>
         </tr>
         <tr>
-          <td data-th="Supplier Code">
-            2
-          </td>
-          <td data-th="Supplier Name">
-            Sundar
-          </td>
-          <td data-th="Invoice Number">
-            Sundar@gmail.com
-          </td>
-          <td data-th="Invoice Date">
-            1234567890
-          </td>
-          <td data-th="Due Date">
-           08:09 Pm
-          </td>
-        </tr>
-        <tr>
-          <td data-th="Supplier Code">
-            3
-          </td>
-          <td data-th="Supplier Name">
-            Ramesh
-          </td>
-          <td data-th="Invoice Number">
-            ramesh@gmail.com
-          </td>
-          <td data-th="Invoice Date">
-            1234567890
-          </td>
-          <td data-th="Due Date">
-           09:30 Am
-          </td>
-        </tr>
+            <td data-th="Supplier Code">
+              134532
+            </td>
+            <td data-th="Supplier Name">
+                Women's Woven Banarasi Kanchipuram Art Silk Saree with
+            </td>
+            <td data-th="Invoice Number">
+              Western
+            </td>
+            <td data-th="Invoice Date">
+              Rs 399.00
+            </td>
+            <td data-th="Due Date">
+             <img style="width: 100px;" src="../../static/img/shop/shop-10.jpg" alt="">
+            </td>
+          </tr>
+        
         
       </tbody>
     </table>
