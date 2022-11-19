@@ -48,7 +48,6 @@ app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
 
 @app.route("/")
 def homepage():
-
     return render_template('client/index.html')
 
 
@@ -58,7 +57,6 @@ def AdminLogin():
 
 @app.route("/NewUser")
 def NewUser():
-
     return render_template('NewUser.html')
     
 @app.route("/UserLogin")
@@ -68,7 +66,6 @@ def UserLogin():
 @app.route("/AdminHome")
 def AdminHome():
     return render_template('client/AdminHome.html')
-
 
 @app.route("/Productinfo")
 def Productinfo():
@@ -95,16 +92,10 @@ def ProductInfo():
 
     return render_template('client/ProductInfo.html', data=engine.execute("SELECT * FROM Employee_Data").fetchall())
 
-
-
 @app.route("/SalesInfo")
 def SalesInfo():
 
     return render_template('SalesInfo.html')
-
-
-
-
 
 @app.route("/Search")
 def Search():
@@ -123,8 +114,6 @@ def Search():
     print(engine.execute("SELECT * FROM Employee_Data").fetchall())
 
     return render_template('ViewProduct.html', data=engine.execute("SELECT * FROM Employee_Data").fetchall())
-
-
 
 @app.route("/viewproduct", methods=['GET', 'POST'])
 def viewproduct():
@@ -145,9 +134,6 @@ def viewproduct():
     print(engine.execute("SELECT * FROM Employee_Data").fetchall())
 
     return render_template('ViewProduct.html', data=engine.execute("SELECT * FROM Employee_Data").fetchall())
-
-
-
 
 @app.route("/RNewUser", methods=['GET', 'POST'])
 def RNewUser():
@@ -263,10 +249,6 @@ def adminlogin():
             print(engine.execute("SELECT * FROM Employee_Data").fetchall())
 
             return render_template('AdminHome.html', data=engine.execute("SELECT * FROM Employee_Data").fetchall())
-
-
-
-
 
 @app.route("/Remove", methods=['GET'])
 def Remove():
