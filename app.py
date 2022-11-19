@@ -70,9 +70,12 @@ def AdminHome():
     return render_template('client/AdminHome.html')
 
 
+@app.route("/Productinfo")
+def AdminHome():
+    return render_template('client/ProductInfo')
+
 @app.route("/NewProduct")
 def NewProduct():
-
     return render_template('NewProduct.html')
 
 @app.route("/ProductInfo")
