@@ -24,7 +24,19 @@
     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/slicknav.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
 
-   
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "6614a608-0327-408e-83a0-5123c07fb74e", // The ID of this integration.
+          region: "eu-gb", // The region your integration is hosted in.
+          serviceInstanceID: "e4d4ccf0-272e-45a2-8982-fa6cb8f6e820", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
 
 </head>
 
