@@ -3,8 +3,6 @@ from flask import Flask, render_template, request, jsonify
 import datetime
 import re
 
-
-
 import ibm_db
 import pandas
 import ibm_db_dbi
@@ -56,8 +54,7 @@ def homepage():
 
 @app.route("/AdminLogin")
 def AdminLogin():
-
-    return render_template('AdminLogin.html')
+ return render_template('client/Adminlogin.html')
 
 @app.route("/NewUser")
 def NewUser():
@@ -70,21 +67,7 @@ def UserLogin():
 
 @app.route("/AdminHome")
 def AdminHome():
-
-    conn = ibm_db.connect(dsn, "", "")
-    pd_conn = ibm_db_dbi.Connection(conn)
-
-    selectQuery = "SELECT * from regtb "
-    dataframe = pandas.read_sql(selectQuery, pd_conn)
-
-    dataframe.to_sql('Employee_Data',
-                     con=engine,
-                     if_exists='append')
-
-    # run a sql query
-    data = engine.execute("SELECT * FROM Employee_Data").fetchall()
-
-    return render_template('AdminHome.html', data=data)
+    return render_template('client/AdminHome.html')
 
 
 @app.route("/NewProduct")
