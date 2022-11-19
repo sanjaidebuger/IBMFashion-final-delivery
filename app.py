@@ -71,7 +71,7 @@ def AdminHome():
 
 
 @app.route("/Productinfo")
-def AdminHome():
+def Productinfo():
     return render_template('client/ProductInfo')
 
 @app.route("/NewProduct")
