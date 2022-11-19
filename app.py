@@ -200,13 +200,6 @@ def RNewProduct():
 
         data1 = 'Record Saved!'
         return render_template('goback.html', data=data1)
-
-
-
-
-
-
-
 @app.route("/userlogin", methods=['GET', 'POST'])
 def userlogin():
     error = None
@@ -240,8 +233,6 @@ def userlogin():
             print(engine.execute("SELECT * FROM Employee_Data").fetchall())
 
             return render_template('client/login.html', data=engine.execute("SELECT * FROM Employee_Data").fetchall())
-
-
 
 
 @app.route("/adminlogin", methods=['GET', 'POST'])
